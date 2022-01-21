@@ -1,0 +1,168 @@
+/* Variables */
+
+:root {
+    /* Colores */
+    --softBlue: #5368df;
+    --softRed: #fa5757;
+    
+    /*Colores neutrales*/
+    
+    --grayishBlue: #9194a1;
+    --veryDarkBlue: #252b46;
+    
+    --fuentePrincipal: 'Rubik', sans-serif;
+
+    --separacion: 5rem;
+}
+
+html {
+    font-size: 18px;
+    box-sizing: border-box;
+    scroll-snap-type: y mandatory;
+}
+
+body{
+    font-family: var(--fuentePrincipal);
+}
+
+/* Tamaño de Media Queries 
+mobile: 375px;
+desktop: 1440px */
+
+/* Fuentes 
+regular : 400;
+bold: 500; */
+
+/*Header*/
+
+header{
+    text-align: left;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    width: 95%;
+}
+
+.logo-header {
+    margin: 1rem;
+    display: flex;
+    justify-content: center;
+}
+
+a, li {
+    list-style: none;
+    text-decoration-line: none;
+}
+
+a:visited, li:visited{
+    color: var(--grayishBlue);
+}
+
+li:hover {
+    background-color: var(--softRed);
+    color: #fff;
+}
+
+nav {
+    text-align: center;
+    margin: 1rem;
+    display: none;
+    color: var(--grayishBlue);
+    text-transform: uppercase;
+    margin-bottom: 0;
+}
+
+.fa-bars{
+    margin: 1rem;
+    display: flex;
+    justify-content: center;
+}
+
+@media (min-width: 375px) {
+    header{
+        flex-direction: row;
+        justify-content: space-between;
+    }
+
+    nav {
+        flex-grow: 1;
+        display: block;
+    }
+
+    ul{
+        display: flex;
+        justify-content: space-around;
+    }
+
+    li {
+        padding: 10px;
+    }
+
+    .fa-bars{
+        display: none;    
+    }
+}
+
+
+/* Card */
+
+hr {
+    border: none;
+    border-top: 5px dotted var(--grayishBlue);
+    color: var(--grayishBlue);
+    background-color: #fff;
+    height: 10px;
+    width: 100%;
+}
+
+/*Footer*/
+
+ul{
+    margin-bottom: 0;
+}
+
+footer{
+    background-color: var(--veryDarkBlue);
+    color: var(--grayishBlue);   
+    text-align: left;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    width: 95%;
+}
+
+.logo-footer {
+    border: solid 1px #fff;
+    margin: auto;
+    margin-top: 1rem;
+}
+
+.social-media{
+    padding: 10px;
+    margin-bottom: .5rem;
+    margin-top: 1rem;
+    text-align: center;
+}
+
+.navegacion-footer{
+    text-align: center;
+    margin: 1rem;
+    display: block;
+    color: var(--grayishBlue);
+    text-transform: uppercase;
+    margin-bottom: 0;
+}
+
+@media (min-width: 375px) {
+    footer{
+        flex-direction: row;
+        justify-content: space-between;
+    }
+}
+
+.author-footer{
+    color: var(--grayishBlue);
+    text-align: center;
+    width: 95%;
+    background-color: var(--veryDarkBlue);
+}
