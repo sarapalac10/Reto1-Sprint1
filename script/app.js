@@ -32,22 +32,28 @@ function eventListeners(){
     easyBtn.addEventListener("click", activarEasy);
 
     const hambMenu = document.getElementById("menu-mobile");
-    hambMenu.addEventListener("click", verMenu)
+    hambMenu.addEventListener("click", verMenu);
 
-    const cierreHamb = document.getElementById("close-mobile")
-    cierreHamb.addEventListener("click", verMenu)
-}
+    const cierreHamb = document.getElementById("close-mobile");
+    const ocultarNavegacion = document.querySelector(".ocultarNavegacion");
+    cierreHamb.addEventListener("click", verMenu);
+    cierreHamb.addEventListener("click", () => 
+        ocultarNavegacion.classList.add("ocultarNavegacion")
+    );
+
+};
 
 function verMenu() {
     const navegacion = document.querySelector(".navegacion");
+    const ocultarNavegacion = document.querySelector(".ocultarNavegacion");
     if (navegacion.classList.contains("menuHamburguesa")) {
-        console.log("prueba")
-        navegacion.classList.remove("menuHamburguesa")
+        navegacion.classList.remove("menuHamburguesa");
     } else {
-        console.log("prueba2")
-        navegacion.classList.add("menuHamburguesa")
+        navegacion.classList.add("menuHamburguesa");
+        ocultarNavegacion.classList.remove("ocultarNavegacion")
     }
 }
+
 
 function activarSimple() {
     const simpleMenu = document.querySelector(".simpleMenu");

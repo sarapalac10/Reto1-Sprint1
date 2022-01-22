@@ -63,10 +63,6 @@ nav {
     margin-left: 5rem;
 }
 
-.navegacion{
-    display: none;
-}
-
 .menuHamburguesa{
     display: flex;
     text-align: center;
@@ -78,10 +74,18 @@ nav {
     opacity: 0.9;
 }
 
+.navegacion{
+    flex-grow: 1;
+    display: block;
+}
+
+.ocultarNavegacion {
+    display: none;
+}
+
 .navegacion ul, .navegacion li, .cierre-mobile {
     text-align: center;
     margin: auto;
-    margin-left: 50%;
     line-height: 3rem;
 }
 
@@ -113,6 +117,10 @@ nav {
 
     .fa-bars{
         display: none;    
+    }
+
+    .ocultarNavegacion {
+        display: contents;
     }
 }
 
@@ -242,7 +250,6 @@ section li:last-of-type{
 
 .noMostrar-feature{
     display: none;
-    background-color: red;
 }
 
 .menu-feature{
