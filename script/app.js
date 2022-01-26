@@ -83,6 +83,37 @@ function activarEasy() {
 };
 
 
+//Validación del formulario
+const form  = document.getElementsByTagName('form');
 
+const email = document.getElementById('mail');
+const emailError = document.querySelector('#mail + span.error');
 
+email.addEventListener('input', function (event) {
+
+  if (email.validity.valid) {
+    emailError.innerHTML = ''; 
+    emailError.className = 'error'; 
+  } else {
+    showError();
+  }
+});
+
+form.addEventListener('submit', function (event) {
+
+  if(!email.validity.valid) {
+    showError();
+    event.preventDefault();
+  }
+});
+
+function showError() {
+  if(email.validity.valueMissing) {
+    emailError.textContent = "Whoops, make sure it's an email.";
+  } else if(email.validity.typeMismatch) {
+    emailError.textContent = "Whoops, make sure it's an email.";
+  } 
+
+emailError.className = 'error active';
+}
 

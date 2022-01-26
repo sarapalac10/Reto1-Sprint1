@@ -114,11 +114,8 @@
       </div>
     </div>
 
+    </div> <!-- Cierre features -->
   
-
-  </div> <!-- Cierre features -->
-  
-    
 
 <div class="extensiones">
   <h2 class="extensiones-title">Download the extension</h2>
@@ -220,14 +217,12 @@
 
   <h2>Stay up-to-date with what we’re doing</h2>
 
-  <form action="" class="formulario">
+<form  novalidate action="" class="formulario">
     <fieldset>
-
-        <input type="email" placeholder="Enter your email address" id="email" required>
-        <!-- <span class="validity"></span> -->
-
-      <button type="submit">Contact Us</button>
+        <input type="email" placeholder="Enter your email address" id="mail" name="mail" required minlength="8" required>
+        <span class="error" aria-live="polite"></span>
     </fieldset>
+    <button type="submit">Contact Us</button>
 </form>
 </div> <!-- cierre clase contacto -->
     
@@ -249,7 +244,7 @@
       <img src="./images/icon-twitter.svg" alt="logo-twitter" >
     </div>
   </footer>
-  <p class="author-footer">Coded by <a href="#">SARA PALACIO ZAPATA</a>  </p> 
+  <p class="author-footer">Coded by <a href="https://github.com/sarapalac10">SARA PALACIO ZAPATA</a>  </p> 
 
   <script src="./script/app.js"></script>
 </body>

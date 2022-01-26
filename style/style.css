@@ -421,6 +421,26 @@ transition: max-height 0.2s ease-out;
 
 /*Contacto*/
 
+.formulario {
+    margin-left: auto;
+    margin-right: auto;
+    display: flex;
+    flex-direction: column;
+}
+
+@media (min-width: 375px ) {
+    .formulario {
+        margin-left: 25%;
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+    }
+
+    .contacto button {
+        padding: 0.8rem;
+        margin: 0.5rem;
+    }
+}
+
 .contacto {
     margin-top: 3.5rem;
     background-color: var(--softBlue);
@@ -436,25 +456,50 @@ transition: max-height 0.2s ease-out;
     background-color: var(--softRed);
     color: #fff;
     border: solid 1px var(--softRed);
-    padding: 0.8rem;
-    margin: 0.5rem;
+    margin: auto;
+    margin-bottom: 1.5rem;
     border-radius: 5px;
+    width: max-content;
+    height: 50px;
 }
 
 .contacto input {
     color: var(--grayishBlue);
     border: solid 1px var(--softBlue);
-    padding: 0.8rem;
-    margin: 0.5rem;
     border-radius: 5px;
+    margin-bottom: 0;
+    width: 100%;
+    height: 50px;
 }
 
-input:invalid+span:after {
-    content: '<br>Error! ';
+.contacto input :hover {
+    background-color: #fff;
     color: var(--softRed);
+}
+
+fieldset * {
+    display: block;
+}
+
+input:invalid {
     padding-left: 5px;
 }
 
-.contacto input:invalid {
-    border: solid 5px var(--softRed);
+input:focus:invalid {
+    outline: none;
+    border: solid 3.5px var(--softRed);
+}
+
+.error {
+    padding: 0;
+    font-size: 80%;
+    color: white;
+    background-color: var(--softRed);
+    border-radius: 0 0 5px 5px;
+    box-sizing: border-box;
+    max-width: fit-content;
+}
+
+.error.active {
+    padding: 0.3em;
 }
